@@ -1,0 +1,328 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  color: #222222;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.superinfo-bg {
+  background: #122ab2;
+}
+.superinfo-bg .superinfo {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 10px 10px 0 10px;
+}
+.superinfo-bg .superinfo p,
+.superinfo-bg .superinfo a {
+  margin-bottom: 10px;
+  color: white;
+}
+
+.menu-bg {
+  background: #2c70ff;
+}
+.menu-bg .menu {
+  display: flex;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 15px 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-bg .menu a {
+  color: white;
+}
+.menu-bg .menu .menu-logo a {
+  font-size: 2.25em;
+  font-weight: bold;
+  margin: 0 10px;
+}
+.menu-bg .menu .menu-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.menu-bg .menu .menu-nav ul a {
+  font-size: 1.15em;
+  display: block;
+  padding: 10px;
+}
+.menu-bg .menu .menu-nav ul a:hover {
+  color: #122ab2;
+}
+
+.introducao {
+  font-size: 3em;
+  line-height: 1;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 60px 10px;
+}
+
+.sobre {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 2px solid #2c70ff;
+  border-bottom: 2px solid #2c70ff;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+.sobre .sobre-info {
+  flex: 2 1 300px; /* flex-basis - vai manter o mínimo de 300px no width do elemento.*/
+  margin: 0 10px;
+}
+.sobre .sobre-info h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+.sobre .sobre-info p {
+  font-size: 1.25em;
+  line-height: 1.4;
+  margin-bottom: 1em;
+  color: #7c7c7c;
+}
+.sobre .sobre-img {
+  flex: 1 1 160px; /* flex-basis - vai manter o mínimo de 160px no width do elemento.*/
+  margin: 0 10px;
+}
+
+.produtos {
+  max-width: 960px;
+  margin: 60px auto;
+}
+.produtos h1 {
+  font-size: 3em;
+  margin: 0 10px 60px 10px;
+}
+.produtos .produtos-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.produtos .produtos-container .produtos-item {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+.produtos .produtos-container .produtos-item h2 {
+  font-size: 3em;
+  color: #a4a4a4;
+  background: #f2f2f2;
+  padding: 60px 20px;
+}
+.produtos .produtos-container .produtos-item.purple {
+  border-top: 8px solid #ae81ff;
+}
+.produtos .produtos-container .produtos-item.pink {
+  border-top: 8px solid #f9265e;
+}
+.produtos .produtos-container .produtos-item.blue {
+  border-top: 8px solid #66d9eb;
+}
+
+.preco {
+  background: #f2f2f2;
+  padding: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.preco .preco-item {
+  flex: 1 1 260px;
+  border: 4px solid white;
+  padding: 20px;
+  margin: 10px;
+}
+.preco .preco-item h2 {
+  font-size: 3em;
+  color: #a4a4a4;
+  text-align: center;
+  margin-top: 20px;
+}
+.preco .preco-item span {
+  max-width: 100%;
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 3em;
+  padding: 10px 0 5px 0;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+}
+.preco .preco-item sup {
+  font-size: 1.5rem;
+}
+.preco .preco-item ul {
+  max-width: 100%;
+  margin: 20px auto;
+  font-size: 1.25em;
+  font-style: italic;
+  color: #7c7c7c;
+}
+.preco .preco-item ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.preco .preco-item ul li::after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: #2c70ff;
+  border-radius: 50%;
+}
+.preco .preco-item a {
+  max-width: 100%;
+  display: block;
+  margin: 20px auto;
+  border: 4px solid;
+  color: #222222;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2.25em;
+  padding: 15px;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .preco {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .preco .preco-item:nth-child(3) {
+    order: -2;
+  }
+  .preco .preco-item:nth-child(2) {
+    order: -1;
+  }
+}
+.qualidade {
+  max-width: 960px;
+  margin: 60px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.qualidade .qualidade-item {
+  flex: 1 1 300px;
+  margin: 20px 10px;
+}
+.qualidade .qualidade-item h2 {
+  font-size: 2.25em;
+  color: #a4a4a4;
+  margin-bottom: 20px;
+}
+.qualidade .qualidade-item h2::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 30px;
+  margin-right: 10px;
+}
+.qualidade .qualidade-item:nth-of-type(3n + 1) h2::before {
+  background: #ae81ff;
+}
+.qualidade .qualidade-item:nth-of-type(3n + 2) h2::before {
+  background: #f9265e;
+}
+.qualidade .qualidade-item:nth-of-type(3n + 3) h2::before {
+  background: #66d9eb;
+}
+.qualidade .qualidade-item p {
+  font-size: 1.25em;
+  line-height: 1.4;
+  color: #7c7c7c;
+}
+
+.newsletter {
+  background: #f7f7f7;
+  padding: 60px calc((100% - 960px) / 2);
+  display: flex;
+  flex-wrap: wrap;
+}
+.newsletter .newsletter-info {
+  flex: 1 1 260px;
+  margin: 0 10px;
+}
+.newsletter .newsletter-info h1 {
+  font-size: 3em;
+  color: #a4a4a4;
+}
+.newsletter .newsletter-info p {
+  font-size: 1.25em;
+  font-style: italic;
+  max-width: 230px;
+  color: #7c7c7c;
+  margin-bottom: 10px;
+}
+.newsletter .newsletter-form {
+  flex: 2 1 260px;
+  margin: 0 10px;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.newsletter .newsletter-form input {
+  flex: 3 1 260px;
+  font-size: 1.25em;
+  color: #7c7c7c;
+  font-style: italic;
+  font-family: "Nunito", sans-serif;
+  border: 4px solid #2c70ff;
+  background: transparent;
+  padding: 10px 15px;
+  margin: 0px;
+  border-radius: 0px;
+}
+.newsletter .newsletter-form button {
+  flex: 1 1 260px;
+  font-size: 2.25em;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: #2c70ff;
+  color: white;
+  margin: 0;
+  cursor: pointer;
+  border: 0px;
+  padding: 15px 10px;
+}
+
+@media (max-width: 600px) {
+  .newsletter-form button {
+    font-size: 1.5em;
+  }
+}
+.footer {
+  display: flex;
+  align-items: center;
+  background: #2c70ff;
+  height: 140px;
+}
+.footer p {
+  flex: 1;
+  text-align: center;
+  font-size: 1.5em;
+  color: #122ab2;
+}/*# sourceMappingURL=styles.css.map */
